@@ -110,7 +110,7 @@ class GradStudent(Student):
         self.specialization = specialization
 
     def print_degree_title(self):
-        return("Master of " + self.major + "with a specialization in " + self.specialization)
+        return("Master of " + self.major + " with a specialization in " + self.specialization)
 # create a new student_4 which uses GradStudent instead.
 # this person's major is Computer Science and their Specialization is Artifical Intelligence
 student_4 = GradStudent(18567392, "Jace", "Joker", "Computer Science", "2023", "Artificial Intelegence")
