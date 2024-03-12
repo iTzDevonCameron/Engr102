@@ -99,15 +99,15 @@ def find_all_authors(soup : bs):
 
 
 def get_top_tags(soup : bs):
-    quotes_list = scrape_quotes(soup)
-    tags_list = []
-    for tags in quotes_list:
-        tags_list.append(Quote(text, author, tags))
-    #tags = soup.find_all("a", {"class": "tag"})
-    #tag_list = []
-    #for tag in tags:
-        #tag_list.append(tag.get_text(strip=True))
-    #return tag_list
+    #quotes_list = scrape_quotes(soup)
+    #tags_list = []
+    #for tags in quotes_list:
+        #tags_list.append(Quote(text, author, tags))
+    tags = soup.find_all("a", {"class": "tag"})
+    tag_list = []
+    for tag in tags:
+        tag_list.append(tag.get_text(strip=True))
+    return tag_list
 
 
 def get_next_url(soup: bs):
